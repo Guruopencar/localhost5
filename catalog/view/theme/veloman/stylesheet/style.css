@@ -1,0 +1,2218 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto-light-webfont.ttf');
+    font-display: swap;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Spaceland-Ten';
+    src: url('fonts/Spaceland-Ten.ttf');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Spaceland-TenOblique';
+    src: url('fonts/Spaceland-TenOblique.ttf');
+    font-display: swap;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Roboto';
+    display: block;
+    position: relative;
+    overflow-x: hidden;
+    color: #232323;
+}
+.mobile-only {
+    display: none;
+}
+.desctop-only {
+    display: block;
+}
+.body-scroll {
+    overflow: hidden;
+}
+.float-right {
+    float: right;
+}
+.align-center {
+    text-align: center;
+}
+::selection {
+    background: #ffd910;
+    color: #232323;
+}
+::-moz-selection {
+    background: #ffd910;
+    color: #232323;
+}
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: -10%;
+    background-color: #232323;
+}
+ul li {
+    list-style-position: inside;
+}
+a, .btn, input, button, textarea {
+    outline: none;
+    display: inline-block;
+    transition: .2s ease-in-out;
+    text-decoration: none;
+}
+a {
+    color: #232323;
+}
+a:hover {
+    text-decoration: underline;
+}
+.btn:hover, input:hover, button:hover {
+    transition: .2s ease-in-out;
+    text-decoration: none;
+}
+a > img {
+    float: left;
+    margin-right: 5px;
+}
+button {
+    border: none;
+    background: transparent;
+}
+button:hover {
+    cursor: pointer;
+}
+.btn {
+    font-family: 'Spaceland-Ten';
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #232323;
+    padding: 15px 40px;
+}
+.btn-white {
+    border: 2px solid #ffd910;
+    background: #fff;
+    color: #232323;
+}
+.btn-white:hover {
+    border: 2px solid #ffd910;
+    background: #ffd910;
+    color: #232323;
+}
+.btn-yellow {
+    border: 2px solid #ffd910;
+    background: #ffd910;
+    color: #232323;
+}
+.btn-yellow:hover {
+    border: 2px solid #ffd910;
+    background: #fff;
+    color: #232323;
+}
+.btn-red {
+    border: 2px solid #f24841;
+    color: #f24841;
+    background: #fff;
+}
+.btn-red:hover {
+    border: 2px solid #232323;
+    color: #f24841;
+    background: #232323;
+}
+.btn-primary, .btn-danger {
+    padding: 10px;
+    color: #fff;
+}
+/**/
+input, select {
+    font-family: 'Spaceland-Ten';
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #232323;
+    padding: 15px 0px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid #ffd910;
+    background: #fff;
+}
+textarea {
+    font-family: 'Spaceland-Ten';
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #232323;
+    padding: 15px 0px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid #ffd910;
+    background: #fff;
+    width: 100%;
+    min-height: 150px;
+}
+form label {
+    margin-top: 15px;
+}
+form .form-group {
+    margin-bottom: 10px;
+}
+.form-group input {
+    display: block;
+}
+.form-group input[type="radio"] {
+    display: inline-block;
+}
+.fa.fa-star-o.fa-stack-2x {
+
+}
+/*STYLE*/
+header {
+    padding-top: 20px;
+    position: relative;
+}
+.texture-01 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.texture-02 {
+    position: absolute;
+    right: 70px;
+    top: 0;
+}
+#top-bar {
+    color: #65696c;
+    margin-bottom: 20px;
+}
+.top-bar-menu a {
+    display: inline-block;
+    font-size: 12px;
+    color: #65696c;
+    line-height: 12px;
+    margin-right: 20px;
+}
+.block-logo {
+    position: relative;
+    margin-top: 5px;
+}
+.block-logo a img {
+    width: 100%;
+}
+footer .block-logo {
+    display: block;
+    margin-bottom: 40px;
+}
+.top-bar-location img {
+    float: left;
+    margin-right: 7px;
+    margin-top: 4px;
+}
+.top-bar-location a {
+    font-size: 12px;
+    color: #65696c;
+}
+.top-bar-soc {
+    margin-top: 5px;
+}
+.top-bar-soc a {
+    margin-right: 5px;
+}
+.top-bar-soc a img {
+    transition: .2s ease-in-out;
+}
+.top-bar-soc a:hover img {
+    transform: scale(1.1);
+}
+.top-bar-phone {
+    text-align: right;
+}
+.top-bar-phone a.top-bar-phone-item span {
+    font-size: 14px;
+    line-height: 14px;
+    position: absolute;
+    left: -25px;
+    top: 5px;
+}
+.top-bar-phone-item {
+    position: relative;
+}
+.top-bar-phone-item img {
+    float: right;
+    margin-top: 13px;
+    margin-left: 3px;
+}
+.phone-popup .phone-top-bar {
+    display: none;
+}
+.phone-popup .phone-top-bar .btn {
+    margin-top: 10px;
+}
+.phone-popup:hover .phone-top-bar {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    background: #fff;
+    text-align: center;
+    padding: 0px 0px 20px;
+    box-shadow: 0px 0px 20px;
+    z-index: 900;
+    width: 200px;
+    border-radius: 10px;
+}
+.top-bar-sale {
+    background: #ffd910;
+    background-image: url("../image/sale-texture.jpg");
+    position: relative;
+    border-radius: 10px;
+    color: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.top-bar-sale h4 {
+    color: #fff;
+    font-family: 'Spaceland-TenOblique';
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+.top-bar-sale a {
+    background: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 14px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.phone-top-bar h5 {
+    margin-top: 10px;
+}
+.form-horizontal .control-label {
+    text-align: left;
+}
+.phone-top-bar p {
+    font-size: 12px;
+}
+.phone-top-bar a img, .phone-top-bar p img {
+    float: left;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+.top-bar-phone a.top-bar-phone-item {
+    font-size: 38px;
+    position: relative;
+    font-family: 'Spaceland-Ten';
+    line-height: 38px;
+    color: #232323;
+}
+a.top-bar-feedback {
+    font-family: 'Spaceland-Ten';
+    text-align: right;
+    font-size: 20px;
+    line-height: 16px;
+    color: #ffd910;
+    text-decoration: underline;
+    display: block;
+}
+a.top-bar-feedback:hover {
+    text-decoration: none;
+}
+nav {
+    margin-top: 11px;
+}
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 30px;
+}
+nav ul li a {
+    font-family: 'Spaceland-Ten';
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #232323;
+}
+nav ul li.sub-menu {
+    position: relative;
+    padding-right: 10px;
+    z-index: 900;
+}
+nav ul li.sub-menu:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background-image: url("../image/down-arrow.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 6px;
+    right: -4px;
+}
+nav ul li.sub-menu .sub-menu-item-catalog {
+    display: none;
+    position: absolute;
+    min-width: 1110px;
+    left: -285px;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0px 0px 15px #e6e6e6;
+    padding: 0px;
+    background-image: url("../image/categ-1.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    border-bottom: 5px solid #ffd910;
+}
+nav ul li.sub-menu .sub-menu-item-catalog.sub-menu-item-catalog-2 {
+    left: -404px;
+    background-image: url("../image/categ-2.png");
+}
+nav ul li.sub-menu .sub-menu-item-catalog.sub-menu-item-catalog-3 {
+    left: -518px;
+    background-image: url("../image/repair.png");
+}
+nav ul li.sub-menu .sub-menu-item-catalog.sub-menu-item-catalog-4 {
+    left: -614px;
+    background-image: url("../image/categ-3.png");
+}
+nav ul li.sub-menu:hover .sub-menu-item-catalog {
+    display: block;
+}
+nav ul li.sub-menu .sub-menu-item-catalog {
+    padding-bottom: 20px;
+}
+nav ul li.sub-menu .sub-menu-item-catalog a.menu-catalog-item {
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 14px;
+    text-transform: inherit;
+    display: block;
+    position: relative;
+}
+.header-search {
+    margin-left: 40px;
+    position: relative;
+}
+.header-search input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #232323;
+    font-family: 'Roboto';
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: unset;
+    color: #232323;
+}
+.header-search button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    top: 10px;
+    transition: .2s ease-in-out;
+}
+.header-search button:hover {
+    transform: scale(1.1);
+}
+#banner {
+    margin-top: 55px;
+    position: relative;
+}
+#banner > .container > .row {
+    background-image: url(../image/bg-slider-2.svg);
+    background-repeat: no-repeat;
+    background-position: -80% 100%;
+    background-size: 120%;
+}
+.banner-text {
+    margin-left: 65px;
+}
+#banner h4 {
+    font-family: 'Spaceland-Ten';
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 30px;
+}
+#banner h1 {
+    font-family: 'Spaceland-TenOblique';
+    font-size: 65px;
+    line-height: 65px;
+    text-transform: uppercase;
+}
+#banner h3 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 40px;
+    font-weight: 100;
+}
+#banner .btn {
+    margin-bottom: 25px;
+}
+.banner-dis {
+    margin-bottom: 100px;
+}
+.banner-dis h2 {
+    font-family: 'Spaceland-Ten';
+    font-size: 55px;
+    line-height: 60px;
+}
+.banner-dis h2 span {
+    color: #ffd910;
+}
+.banner-dis p {
+    font-size: 14px;
+    color: #65696c;
+    line-height: 16px;
+}
+#stock {
+    min-height: 425px;
+    position: relative;
+}
+.all-stock {
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    z-index: 200;
+}
+.all-stock:hover {
+    transform: rotate(5deg);
+}
+.texture-stock {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: 'Spaceland-TenOblique';
+    font-size: 150px;
+    line-height: 150px;
+    text-transform: uppercase;
+    color: #e6e6e7;
+}
+#owl-stock {
+    z-index: 99;
+}
+#owl-stock a.owl-stock-item {
+    margin-top: 80px;
+    width: 100%;
+    text-align: center;
+    color: #232323;
+}
+#owl-stock a.owl-stock-item:hover {
+    text-decoration: none;
+}
+#owl-stock a.owl-stock-item img {
+    width: 80%;
+    margin: auto;
+    float: none;
+}
+#owl-stock a.owl-stock-item:hover img {
+    width: 80%;
+    margin: auto;
+}
+#owl-stock a.owl-stock-item h4 {
+    font-family: 'Spaceland-TenOblique';
+    color: #232323;
+    font-size: 24px;
+    line-height: 24px;
+}
+#owl-stock a.owl-stock-item h3 {
+    font-family: 'Spaceland-Ten';
+    color: #232323;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+#owl-stock a.owl-stock-item h3:hover {
+    text-decoration: none;
+}
+#owl-stock a.owl-stock-item h3 span {
+    font-size: 20px;
+    line-height: 20px;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+#owl-stock .owl-dots, #owl-stock .owl-nav {
+    display: none;
+}
+#category-banners {
+    position: relative;
+}
+.texture-03 {
+    position: absolute;
+    right: 130px;
+    bottom: -60px;
+}
+#sale form {
+    text-align: center;
+}
+#sale form input {
+    background: transparent;
+    border-bottom: 2px solid #232323;
+    color: #232323;
+    margin-right: 10px;
+    padding: 13px 0px;
+}
+#sale form button {
+    background: #232323;
+    border: 2px solid #232323;
+    color: #fff;
+}
+#sale form button:hover {
+    background: transparent;
+    border: 2px solid #232323;
+    color: #232323;
+}
+a.category-banner-item {
+    min-height: 170px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+}
+a.category-banner-item:after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.4;
+    background: #232323;
+    z-index: 100;
+    transition: .2s ease-in-out;
+}
+a.category-banner-item:hover:after {
+    opacity: 0;
+}
+a.category-banner-item:hover {
+    text-decoration: none;
+}
+a.category-banner-item span {
+    color: #232323;
+    background: #ffd910;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-family: 'Spaceland-TenOblique';
+    position: absolute;
+    bottom: 35px;
+    left: 10px;
+    z-index: 200;
+}
+a.category-banner-item h6 {
+    font-family: 'Spaceland-Ten';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 200;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ffd910;
+}
+.block-head h2 {
+    font-family: 'Spaceland-TenOblique';
+    font-size: 55px;
+    line-height: 50px;
+    color: #232323;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.block-head p {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 30px;
+    font-weight: 100;
+}
+#quiz {
+    padding-top: 100px;
+    position: relative;
+    margin-bottom: 100px;
+}
+.texture-04 {
+    position: absolute;
+    left: 0;
+    top: -70px;
+}
+/*products*/
+#products, #special {
+    margin-bottom: 100px;
+    position: relative;
+}
+.product-item {
+    position: relative;
+    padding: 20px;
+    transition: .2s ease-in-out;
+    z-index: 100;
+}
+.product-item:hover {
+    text-decoration: none;
+}
+.product-item .product-param {
+    display: none;
+    z-index: 200;
+    transition: .2s ease-in-out;
+}
+.product-item .product-btn {
+    display: none;
+    z-index: 200;
+    transition: .2s ease-in-out;
+}
+.product-item:hover .product-param {
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0px;
+    padding: 0px 20px 20px;
+    z-index: 200;
+    border-bottom: 2px solid #ffd910;
+}
+.product-item:hover .product-btn {
+    display: block;
+    position: absolute;
+    z-index: 200;
+    right: 15px;
+    top: 50px;
+}
+.product-item.product-view-list {
+    position: relative;
+}
+.product-item.product-view-list .product-item-img {
+    width: 195px;
+    float: left;
+    position: relative;
+    margin-right: 30px;
+}
+.product-btn a, .product-btn button {
+    display: block;
+    opacity: 0.3;
+    background: transparent;
+    margin-bottom: 5px;
+}
+.product-btn a:hover, .product-btn button:hover {
+    opacity: 1;
+}
+.product-param ul li {
+    list-style: square;
+    font-size: 12px;
+    line-height: 18px;
+    list-style-position: inside;
+    color: #232323;
+}
+.product-item:hover {
+    box-shadow: 0px 0px 15px #e6e6e6;
+    z-index: 200;
+}
+.product-item .product-item-img {
+    min-height: 160px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+}
+.product-item .btn {
+    position: relative;
+    margin: 10px auto 5px;
+    display: table;
+}
+.product-label {
+    position: relative;
+    margin-bottom: 0px;
+    height: 22px;
+    z-index: 100;
+}
+.compare-sacsses {
+    position: fixed;
+    z-index: 999999;
+    background: #ffd910;
+    right: 0;
+    top: 50px;
+    width: 200px;
+    height: 50px;
+    display: none;
+    text-align: center;
+}
+.product-item .product-label span {
+    position: relative;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: 'Spaceland-Ten';
+    text-transform: uppercase;
+    padding: 5px 10px;
+    color: #fff;
+    margin-right: 5px;
+}
+.label-new {
+    background: #129d00;
+}
+.label-sale {
+    background: #00b7f4;
+}
+.product-item-img .product-label span.label-check {
+    position: absolute !important;
+    left: 0;
+    top: 30px;
+    padding-left: 0px;
+    color: #0aa06e;
+    font-size: 18px;
+    line-height: 24px !important;
+}
+.product-item-img .product-label span.label-check img {
+    float: left;
+    margin-right: 5px;
+}
+.label-stock {
+    background: #f24841;
+}
+.product-item-price span {
+    font-family: 'Spaceland-Ten';
+    color: #232323;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.product-item .btn-bay-one {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #232323;
+    text-decoration: underline;
+    font-size: 12px;
+    display: block;
+}
+.product-item .btn-bay-one:hover {
+    text-decoration: none;
+}
+.product-item-price span.price-old {
+    /*color: #bfbfbf;*/
+    font-size: 16px;
+    opacity: 0.3;
+    margin-right: 5px;
+    text-decoration: line-through;
+    margin-bottom: 0px;
+}
+.product-item-price span.price-new {
+    color: #ffd910;
+}
+.product-item h4 {
+    position: relative;
+    height: 52px;
+    display: block;
+}
+.product-item h4 a {
+    font-family: 'Spaceland-Ten';
+    color: #232323;
+    font-size: 22px;
+    line-height: 26px;
+    height: 52px;
+    display: block;
+    position: relative;
+}
+/*brands*/
+#brands {
+    margin-bottom: 100px;
+    position: relative;
+}
+a.brand-item {
+    opacity: 0.5;
+    filter: grayscale(1);
+    min-height: 80px;
+    display: block;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+a.brand-item:hover {
+    opacity: 1;
+    filter: grayscale(0);
+}
+.texture-05 {
+    position: absolute;
+    right: 0;
+    z-index: 200;
+}
+.texture-06 {
+    position: absolute;
+    left: 0;
+    top: -200px;
+}
+/*sale*/
+#sale {
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+    background: #ffd910;
+}
+.texture-07 {
+    position: absolute;
+    right: 0;
+    z-index: 200;
+}
+#sale .container .row {
+    position: relative;
+}
+.texture-discount {
+    position: absolute;
+    right: -100px;
+    top: -78px;
+}
+#sale h3 {
+    font-size: 26px;
+    line-height: 26px;
+    font-family: 'Spaceland-TenOblique';
+    text-align: center;
+}
+/*why*/
+#why {
+    margin-bottom: 100px;
+    position: relative;
+}
+.why-item {
+    position: relative;
+}
+.why-item img {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 100px;
+}
+.why-item h4 {
+    float: left;
+    font-size: 70px;
+    line-height: 52px;
+    color: #ffd910;
+    font-family: 'Spaceland-Ten';
+    margin-right: 10px;
+}
+.why-item h4 span {
+    font-family: 'Spaceland-TenOblique';
+    color: #232323;
+}
+.why-item p {
+    font-size: 12px;
+    line-height: 12px;
+}
+/*post*/
+#blog {
+    margin-bottom: 70px;
+    position: relative;
+}
+.blog-item {
+    margin-bottom: 30px;
+}
+.blog-item a.blog-image {
+    min-height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+}
+.blog-item .blog-date {
+    color: #65696c;
+    font-size: 12px;
+    line-height: 16px;
+}
+.blog-item h4 a {
+    font-size: 22px;
+    line-height: 24px;
+    height: 24px;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-family: 'Spaceland-Ten';
+    color: #232323;
+}
+.blog-item p {
+    font-size: 12px;
+    line-height: 14px;
+    color: #65696c;
+}
+footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #eff0f0;
+    background-image: url("../image/texture-09.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position: relative;
+}
+footer h4 {
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Spaceland-Ten';
+}
+footer p {
+    font-size: 14px;
+    line-height: 16px;
+}
+footer ul {
+    margin-bottom: 30px;
+}
+footer ul li {
+    list-style-type: square;
+}
+footer ul li a {
+    color: #232323;
+    font-size: 14px;
+    line-height: 18px;
+}
+.texture-08 {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+}
+/**/
+.step-slide__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    font-family: 'Spaceland-Ten';
+    text-align: center;
+}
+.qus-item {
+    text-align: center;
+    font-family: 'Spaceland-Ten';
+}
+.pick-item__label {
+    position: relative;
+    padding-left: 30px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.pick-item__input {
+    display: none;
+    width: 70px;
+    height: 48px;
+    border: 1px solid #d9d9d9;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.pick-item__label:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #232323;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pick-item__input:checked + .pick-item__label:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #232323;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.last-step-form__input {
+    margin-right: 10px;
+}
+.last-step-form {
+    text-align: center;
+}
+.popup-modal-style {
+    width: 450px;
+    padding: 60px;
+    position: relative;
+    background: #fff;
+    margin: auto;
+    text-align: center;
+}
+#modal-popup-add-cart.popup-modal-style {
+    background: #0aa06e;
+}
+#modal-popup-add-cart.popup-modal-style p#modal-popup-add-cart-mess, #modal-popup-add-cart.popup-modal-style p#modal-popup-add-cart-mess a {
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+}
+#modal-popup-add-cart.popup-modal-style h3 {
+    color: #fff;
+}
+.popup-modal-style form input {
+    display: block;
+    margin: 0px auto 15px;
+    min-width: 160px;
+}
+.popup-modal-style h3 {
+    font-family: 'Spaceland-TenOblique';
+    font-size: 35px;
+    line-height: 30px;
+    color: #232323;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.popup-modal-style p {
+    font-size: 14px;
+    line-height: 14px;
+    color: #232323;
+    margin-bottom: 20px;
+}
+.price-clock {
+    display: table;
+    text-align: center;
+    margin: 0px auto 30px;
+}
+.price-clock .time .etUnit .etNumber {
+    width: 30px;
+    margin-bottom: 10px;
+}
+.price-clock .time .etSep {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 50px;
+    padding: 0px 4px;
+}
+/*breadcrumbs*/
+.breadcrumbs {
+    position: relative;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+.breadcrumbs a, .breadcrumbs span {
+    font-size: 12px;
+    margin-right: 5px;
+    color: #a9b0b3;
+}
+.breadcrumbs a:after {
+    content: '-';
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+    color: #a9b0b3;
+}
+/*product*/
+.product-item-img a {
+    min-height: 250px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+.product-item-img a img {
+    width: 100%;
+}
+.product-item {
+    position: relative;
+}
+#owl-product-slider .owl-dots {
+    margin-top: 10px;
+    text-align: left;
+}
+#owl-product-slider {
+    margin-bottom: 30px;
+}
+.product-item-img .product-label span {
+    position: relative;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: 'Spaceland-Ten';
+    text-transform: uppercase;
+    padding: 5px 10px;
+    color: #fff;
+    margin-right: 5px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot span {
+    border-radius: 0px;
+    width: 15px;
+    height: 15px;
+    border: none;
+    background: #e2e2e2;
+    transition: .3s ease-out;
+    margin: 0;
+    margin-right: 10px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #ffd910;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 0px;
+}
+#product-item, #product {
+    margin-bottom: 100px;
+}
+#product-item h1, #product h1 {
+    font-family: 'Spaceland-TenOblique';
+    font-size: 40px;
+    line-height: 40px;
+    color: #232323;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+#product-item h4, #product h4 {
+    font-family: 'Spaceland-Ten';
+    font-size: 26px;
+    line-height: 26px;
+    color: #232323;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#product-item h5, #product h5 {
+    font-weight: 100;
+}
+#product-item h5 span, #product h5 span {
+    font-weight: 900;
+}
+#product-item h5 img, #product h5 img {
+    margin-right: 5px;
+}
+#product-item h5 .product-item-count, #product h5 .product-item-count {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+.product-item-count span {
+    width: 15px;
+    height: 7px;
+    background: #232323;
+    display: inline-block;
+    position: relative;
+    margin-right: 3px;
+    opacity: 0.3;
+}
+.product-item-count.product-item-count-many span {
+    background: #129d00;
+    opacity: 1;
+}
+.product-item-count.product-item-count-medium span:nth-child(1), .product-item-count.product-item-count-medium span:nth-child(2) {
+    background: #ffd910;
+    opacity: 1;
+}
+#product-item .product-item-price, #product .product-item-price {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#product-item .product-item-price span, #product .product-item-price span {
+    font-size: 40px;
+    line-height: 40px;
+}
+#product-item .product-item-price span.price-old, #product .product-item-price span.price-old {
+    font-size: 20px;
+}
+#product-item .product-btn, #product .product-btn {
+    display: inline-block;
+}
+#product-item .product-btn a, #product-item .product-btn button, #product .product-btn button, #product .product-btn a {
+    font-size: 12px;
+    opacity: 1;
+    display: inline-block;
+    margin-right: 20px;
+    background: transparent;
+}
+#product-item .product-btn a img, #product-item .product-btn button img, #product .product-btn button img, #product .product-btn a img {
+    float: left;
+    margin-right: 5px;
+}
+#product-item .product-btn button, #product .product-btn button {
+    color: #232323;
+}
+.mfp-figure:after {
+    box-shadow: none;
+    background: #fff;
+}
+.product-item-select {
+    margin-bottom: 20px;
+}
+.product-item-select select {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.btn-cart img {
+    float: left;
+    margin-right: 10px;
+    margin-top: 1px;
+}
+.btn-cart {
+    margin: 0 auto;
+    padding: 15px 30px;
+}
+.product-item-btn {
+    margin-bottom: 50px;
+}
+.product-item-btn a {
+    margin-right: 20px;
+}
+.product-item-btn a.btn-bay-sale img {
+    float: left;
+    margin-right: 10px;
+    margin-top: 1px;
+}
+.product-item-btn a.btn-bay-one {
+    margin-top: 20px;
+}
+.product-item-btn a.btn-bay-one img {
+    float: left;
+    margin-right: 10px;
+    margin-top: -6px;
+}
+.product-item-brand {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.product-item-dis {
+    margin-bottom: 30px;
+    min-height: 350px;
+}
+.product-item-consultant {
+    position: relative;
+    background: #dedede;
+    min-height: 450px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.product-item-consultant h2 {
+    color: #232323;
+    background: #fff;
+    padding: 10px;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-family: 'Spaceland-TenOblique';
+    position: absolute;
+    bottom: 165px;
+    left: 10px;
+    z-index: 200;
+}
+.product-item-consultant h3 {
+    color: #232323;
+    background: #fff;
+    padding: 10px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-family: 'Spaceland-TenOblique';
+    position: absolute;
+    bottom: 115px;
+    left: 10px;
+    z-index: 200;
+}
+.product-item-consultant span {
+    color: #232323;
+    background: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: 'Spaceland-TenOblique';
+    position: absolute;
+    bottom: 80px;
+    left: 10px;
+    z-index: 200;
+}
+.product-item-consultant a {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.product-item-consultant img {
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    right: 20px;
+}
+#product-item p, #product p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+.product-item-video {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 110;
+    color: #f24841;
+    font-family: 'Spaceland-TenOblique';
+    font-size: 20px;
+    line-height: 24px;
+}
+.product-item-video img {
+    margin-right: 5px;
+    float: left;
+}
+#modal-popup-video.popup-modal-style {
+    width: 600px;
+    height: 380px;
+    padding: 0px;
+    position: relative;
+    background: #fff;
+    margin: auto;
+    text-align: center;
+}
+.product-tab-text {
+    display: none;
+}
+.product-tab-text.tab-active {
+    display: block;
+}
+.product-tab {
+    display: block;
+    margin-bottom: 30px;
+}
+.product-tab-item {
+    font-family: 'Spaceland-Ten';
+    font-size: 26px;
+    line-height: 26px;
+    color: #232323;
+    display: inline-block;
+    margin-right: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #fff;
+}
+.product-tab-item.tab-active {
+    border-bottom: 3px solid #ffd910;
+}
+.product-item-rassrochka {
+    position: relative;
+    padding: 5px 15px 15px;
+    border: 5px double #00b7f4;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.product-item-rassrochka a {
+    font-size: 12px;
+}
+.product-item-rassrochka h6 {
+    font-weight: 100;
+}
+.calculator__bill {
+    display: none;
+}
+.calculator__tip {
+    width: 100%;
+    padding-bottom: 15px;
+}
+.range-block {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+}
+#product-item .range-block p, #product .range-block p {
+    text-align: center;
+    font-size: 12px;
+}
+.range-block span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    display: block;
+    left: 0;
+    font-size: 10px;
+}
+.range-block span:nth-child(5) {
+    position: absolute;
+    top: 0;
+    display: block;
+    right: 0;
+    font-size: 10px;
+}
+.calculator__result {
+    font-family: 'Spaceland-TenOblique';
+    font-size: 26px;
+    line-height: 26px;
+    color: #232323;
+}
+.btn-rassrochka {
+    font-family: 'Spaceland-Ten';
+    font-size: 17px !important;
+    line-height: 17px;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 10px 0px;
+    background: #00b7f4;
+}
+.btn-rassrochka:hover {
+    background: #00a0d9;
+    text-decoration: none;
+}
+table {
+    width: 100%;
+    position: relative;
+    border-collapse: collapse;
+}
+table thead tr {
+    background: #f0f0f0;
+}
+table thead tr td {
+    font-family: 'Spaceland-Ten';
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+}
+table tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+table tr td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 14px;
+    padding-right: 10px;
+}
+#product table tr td:nth-child(2), #cart table tr td:nth-child(2) {
+    text-align: right;
+}
+table .btn {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+/*content*/
+.content {
+    position: relative;
+    display: block;
+    margin-bottom: 100px;
+}
+.content h1 {
+    font-family: 'Spaceland-TenOblique';
+    font-size: 40px;
+    line-height: 40px;
+    color: #232323;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+#column-left h3 {
+    font-family: 'Spaceland-TenOblique';
+    font-size: 40px;
+    line-height: 40px;
+    color: #232323;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.content p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+#live-search {
+    margin-top: 0 !important;
+    left: -285px !important;
+    width: 500px !important;
+}
+#live-search ul li .livesearch-info {
+    font-size: 14px !important;
+}
+#live-search ul li .livesearch-price .livesearch-product-special {
+    opacity: 0.3;
+    font-family: 'Spaceland-Ten' !important;
+    color: #232323 !important;
+    font-size: 14px !important;
+}
+#live-search ul li .livesearch-price .livesearch-product-price {
+    font-family: 'Spaceland-Ten' !important;
+    color: #232323 !important;
+    font-size: 20px !important;
+    text-align: right !important;
+}
+#live-search ul li .livesearch-image {
+
+}
+#live-search ul li .livesearch-price {
+    width: 100%;
+}
+#live-search ul li .livesearch-info {
+    width: 64%;
+}
+.pagination {
+    margin-top: 30px;
+    position: relative;
+}
+.pagination li {
+    display: inline-block;
+    list-style-type: none;
+}
+.pagination li span, .pagination li a {
+    padding: 8px 10px;
+    font-size: 14px;
+    line-height: 14px;
+    border: 2px solid #ffd910;
+    display: block;
+    margin-right: 10px;
+}
+.pagination li.active span, .pagination li a:hover {
+    background: #ffd910;
+    text-decoration: none;
+}
+.price-offer {
+    font-size: 22px !important;
+    line-height: 22px !important;
+    font-weight: 300;
+    color: #fff !important;
+    background: #32ba7c;
+    padding: 10px 15px;
+}
+#form-review {
+    position: relative;
+}
+#form-review label {
+    display: block;
+}
+#quiz > div.container > div > div.col-lg-6.offset-lg-2 > form > div > div > div.bx-viewport > div > div.bx-viewport > div > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(3) > label > div > img, #quiz > div.container > div > div.col-lg-6.offset-lg-2 > form > div > div > div.bx-viewport > div > div.bx-viewport > div > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(4) > label > div > img {
+    height: 56px;
+    margin-top: 10px;
+}
+.product-item-delivery {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 30px;
+    border: 4px dashed #bdbdbd;
+}
+.product-item-delivery p span {
+    font-weight: 900;
+}
+.product-item-delivery img {
+    float: left;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.product-item-delivery a {
+    color: #f24841;
+}
+/*map*/
+#map canvas {
+    filter: grayscale(1);
+    opacity: 0.6;
+}
+/*catalog*/
+.catalog-category {
+    margin-bottom: 30px;
+}
+.catalog-category-mobile {
+    margin-bottom: 0px;
+}
+.catalog-category h2, .catalog-category-mobile h2 {
+    font-family: 'Spaceland-TenOblique';
+    font-size: 20px;
+    line-height: 20px;
+    color: #232323;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.catalog-category a {
+    font-size: 14px;
+    line-height: 16px;
+    border: 1px solid #232323;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.catalog-category-mobile a {
+    font-size: 12px;
+    line-height: 12px;
+    border: 1px solid #232323;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.catalog-category-mobile .owl-theme .owl-nav.disabled + .owl-dots {
+    display: none;
+}
+.catalog-view {
+    position: relative;
+}
+.catalog-view span {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    opacity: 0.3;
+    transition: .2s ease-in-out;
+}
+.catalog-view span:hover {
+    cursor: pointer;
+}
+.catalog-view span:hover, .catalog-view span.catalog-view-active {
+    opacity: 1;
+}
+hr {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffd910;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+#input-sort, #input-limit {
+    padding-top: 0;
+}
+.catalog-sort {
+    margin-bottom: 30px;
+}
+.catalog-sort label, .catalog-sort a {
+    font-size: 12px;
+    margin-right: 10px;
+}
+.block-wishlist {
+    margin-top: 5px;
+}
+/*tab*/
+.tab-item {
+    display: none;
+}
+.tab-item.tab-active {
+    display: block;
+}
+.tab-nav {
+    position: absolute;
+    top: -40px;
+}
+.tab-nav .tab-nav-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+.tab-nav .tab-nav-item a {
+    font-family: 'Spaceland-TenOblique';
+    color: #232323;
+    font-size: 24px;
+    line-height: 24px;
+}
+.tab-nav-item.tab-active a {
+    color: #ffd910;
+}
+.list-group a {
+    display: block;
+}
+.block-cart {
+    text-align: right;
+}
+.block-cart a img {
+    height: 46px;
+    margin-right: 0;
+}
+.block-cart a span {
+    position: absolute;
+    padding: 6px 8px;
+    background: #ffd910;
+    color: #232323;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 12px;
+    border-radius: 10px;
+    right: 5px;
+    top: 5px;
+}
+.footer-pay img {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#cart {
+    position: relative;
+}
+#cart .cart-view {
+    display: none;
+}
+#cart.open .cart-view {
+    display: block;
+    position: absolute;
+    z-index: 999999;
+    right: 0;
+    left: auto;
+    background: #fff;
+    border-bottom: 5px solid #ffd910;
+    padding: 20px;
+    min-width: 610px;
+    box-shadow: 0px 10px 10px #bdbdbd;
+}
+#cart ul.cart-view li {
+    list-style-type: none;
+}
+#cart .cart-basket {
+    background: transparent;
+    position: relative;
+}
+#cart .cart-basket img {
+    width: 46px;
+}
+#cart .cart-basket span {
+    position: absolute;
+    padding: 6px 8px;
+    background: #ffd910;
+    color: #232323;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 12px;
+    border-radius: 10px;
+    right: -10px;
+    top: -5px;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.alert-success {
+    background: #0aa06e;
+}
+.alert-danger {
+    background: #ffec8a;
+}
+#review {
+    margin-bottom: 30px;
+}
+.tooltip {
+    display: none !important;
+}
+.product-btn-compare, .product-btn-heart {
+    font-family: 'Roboto';
+}
+.product-btn-compare:hover, .product-btn-heart:hover {
+    text-decoration: underline;
+}
+.sub-menu-item-catalog h4 a {
+    padding: 30px 0px 10px 30px;
+}
+.sub-child {
+    position: relative;
+    width: 230px;
+}
+.sub-child-menu > .sub-child-item {
+    display: none;
+}
+.sub-child-menu:hover {
+    background: #f0f0f0;
+}
+.sub-child-menu:hover .sub-child-item {
+    /*position: absolute;*/
+    position: relative;
+    display: block;
+    left: 230px;
+    top: -30px;
+    height: 100%;
+    width: 230px;
+    background: #f0f0f0;
+}
+.sub-child-menu .sub-child-item a {
+    display: block;
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 14px;
+    text-transform: inherit;
+    padding: 5px 10px;
+    position: relative;
+    width: 100%;
+}
+.menu-catalog-item {
+    padding: 5px 0px 5px 30px;
+
+}
+.sub-child-item-brand {
+    position: absolute;
+    right: -600px;
+    width: 600px;
+    top: 0;
+    height: 100%;
+    display: block;
+}
+.sub-child-menu .sub-child-item .sub-child-item-brand a {
+    width: 25%;
+    display: inline-block;
+}
+/*product-item-select*/
+.product-item-select .radio, .product-item-select .radio {
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+}
+.product-item-select label span {
+    text-align: center;
+    display: block;
+    font-size: 10px;
+}
+.product-item-select label input {
+    display: block;
+    margin: auto;
+}
+.product-item-select label img {
+    display: block;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+.product-item-select .radio input {
+    margin: auto;
+}
+.product-item-select .radio label:hover, .product-item-select .radio label:hover {
+    cursor: pointer;
+}
+.product-item-related {
+    margin-bottom: 20px;
+}
+.product-item-related-photo {
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+}
+.ocf-offcanvas .ocfilter-mobile-handle {
+    /*display: none !important;*/
+    top: 78px;
+    z-index: 100;
+}
+.ocf-offcanvas .ocf-offcanvas-body {
+    z-index: 100;
+    background: #fff;
+}
+.ocf-offcanvas .ocfilter-mobile-handle .btn {
+    padding: 11px 15px;
+    background: #ffd910;
+}
+.related-href {
+    padding: 0px 10px;
+    background: #f0f0f0;
+    margin-right: 5px;
+}
+.panel {
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    border: none !important;
+    padding: 15px;
+}
+.panel h1 {
+    font-family: 'Spaceland-TenOblique';
+    font-size: 40px;
+    line-height: 40px;
+    color: #232323;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.ocf-offcanvas.active:after {
+    content: '';
+    position: fixed;
+    display: block;
+    z-index: 0;
+    background: #0000008c;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.ocfilter-option label small {
+    background-color: #ffd910;
+    color: #232323;
+    font-weight: 200;
+    font-size: 10px;
+    margin-left: 5px;
+}
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}
+/**/
+.noUi-connect {
+    background: #ffd910 !important;
+}
+.noUi-connect {
+    box-shadow: none !important;
+}
+/*Разработка & дизайн: weba.by*/
+.weba-dev {
+    font-family: Roboto, sans-serif;
+    float: right;
+    position: relative;
+    margin-top: 70px;
+}
+.weba-dev > span {
+    font-size: 10px;
+}
+.weba-dev a {
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+    display: block;
+    line-height: 33px;
+    color: #232323;
+}
+.weba-dev a:hover {
+    color: #313131;
+}
+.weba-logo {
+    font-family: Roboto, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 48px;
+    color: #313131;
+}
+.weba-logo span {
+    font-family: Roboto, sans-serif;
+    color: #ffea00;
+    font-weight: bold;
+}
+.weba-href {
+    text-align: right;
+}
+.webapico {
+    position: absolute;
+    right: -12px;
+    top: -21px;
+    width: 50px;
+    height: 52px;
+    animation: webapico-anime 2s linear infinite;
+    transform-origin: 47% 100%;
+}
+@keyframes webapico-anime {
+    0% {
+        background-image: url(../image/weba/webapico.png);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    15% {
+        background-image: url(../image/weba/webapico.png);
+        transform: rotate(-60deg);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    20% {
+        background-image: url(../image/weba/webapico.png);
+        transform: rotate(-45deg);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    25% {
+        background-image: url(../image/weba/webapico.png);
+        transform: rotate(-60deg);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    30% {
+        background-image: url(../image/weba/webapico.png);
+        transform: rotate(-45deg);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    50% {
+        background-image: url(../image/weba/webapico.png);
+        transform: rotate(0deg);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    70% {
+        background-image: url(../image/weba/webapico.png);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    73% {
+        background-image: url(../image/weba/webapico2.png);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    76% {
+        background-image: url(../image/weba/webapico.png);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    81% {
+        background-image: url(../image/weba/webapico2.png);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    83% {
+        background-image: url(../image/weba/webapico.png);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    100% {
+        background-image: url(../image/weba/webapico.png);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+}
+/*menu*/
+.mobile-menu-btn {
+    /*position: fixed;*/
+    z-index: 1000;
+    position: relative;
+    right: 0px;
+    /*top: 10px;*/
+    width: 28px;
+    height: 28px;
+}
+.mobile-menu-btn img {
+    width: 100%;
+}
+.mobile-menu {
+    position: fixed;
+    display: block;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #fff;
+    z-index: 1100;
+    transition: .2s ease-in-out;
+    padding: 40px 15px 100px;
+    text-align: center;
+    overflow-y: auto;
+}
+.mobile-menu.active {
+    transition: .2s ease-in-out;
+    left: 0%;
+}
+.mobile-menu-btn-close {
+    display: none;
+    position: absolute;
+    z-index: 1101;
+    right: 15px;
+    top: 15px;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+}
+.mobile-menu.active .mobile-menu-btn-close {
+    display: block;
+}
+.mobile-menu a {
+    text-align: left;
+    margin-bottom: 5px;
+    display: block;
+    font-family: 'Spaceland-Ten';
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #232323;
+}
+.mobile-menu a img {
+    float: none;
+}
+.mobile-menu h4, .mobile-menu-catalog h4 {
+    font-family: 'Spaceland-TenOblique';
+    font-size: 34px;
+    line-height: 34px;
+    color: #c5c5c5;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.mobile-menu p {
+    text-align: left;
+}
+.mobile-menu h5 {
+    text-align: left;
+}
+.mobile-menu .head-logo a {
+    text-align: center;
+}
+.mobile-menu-catalog {
+    position: fixed;
+    display: block;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    top: 0;
+    background: #fff;
+    z-index: 1200;
+    transition: .2s ease-in-out;
+    padding: 10px 0px 100px;
+    text-align: left;
+    overflow-y: auto;
+}
+.mobile-menu-catalog.active {
+    transition: .2s ease-in-out;
+    right: 0%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.mobile-menu-btn-close-catalog {
+    display: none;
+    position: absolute;
+    z-index: 1201;
+    right: 15px;
+    top: 15px;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+}
+.mobile-menu-catalog.active .mobile-menu-btn-close-catalog {
+    display: block;
+}
+.no-href:hover {
+    cursor: default;
+}
+.rating {
+    margin-bottom: 5px;
+    display: block;
+    min-height: 22px;
+}
+.rating .fa-star + .fa-star-o {
+    color: #E69500;
+}
+.rating .fa-star {
+    color: #FC0;
+    font-size: 15px;
+}
+.rating .fa-stack, .rating .fa-stack-2x {
+    width: 16px;
+    height: 16px;
+    font-size: 1rem;
+}
+.product-item-btn .btn-rassrochka {
+    display: none;
+}
+.btn-bay-sale.mobile-only {
+    display: none;
+}
+.owl-carousel{
+    background: transparent;
+}
